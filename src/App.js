@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Router, Routes } from 'react-router-dom'
-import Home from './Body/Home'
-import Navbar from './Components/Layout/Navbar'
+import Home from './Components/Body/Home'
+import Navbar from './Components/Layout-/Navbar'
 import About from './Pages/About'
 
 

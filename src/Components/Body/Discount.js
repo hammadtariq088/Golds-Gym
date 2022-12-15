@@ -1,5 +1,5 @@
 import React from 'react'
-import discount1 from '../img/photos/discount1.jpg'
+import discount1 from '../../img/photos/discount1.jpg'
 
 function Discount() {
   return (

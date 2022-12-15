@@ -1,5 +1,5 @@
 import React from "react";
-import trainers1 from "../images/trainers1.png";
+import trainers1 from "../../images/trainers1.png";
 
 const Hometrainers = () => {
   return (

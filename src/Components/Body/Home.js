@@ -1,5 +1,5 @@
 import React from "react";
-import homeright from '../images/h1.png'
+import homeright from '../../images/h1.png'
 import Classes from "./Classes";
 import Discount from "./Discount";
 import Hometrainers from "./Hometrainers";
