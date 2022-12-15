@@ -1,9 +1,23 @@
 import React from 'react'
+import { Route, Router, Routes } from 'react-router-dom'
+import Home from './Body/Home'
+import Navbar from './Components/Layout/Navbar'
+import About from './Pages/About'
+
 
 const App = () => {
   return (
-    <div>
-      <h1>My App</h1>
+    <div className="wrapper home-default-wrapper">
+      <Navbar/>
+      <Routes>  
+
+      <Route path="/" element={<Home/>}/>
+      <Route path="/aboutus" element={<About/>}/>
+
+      
+
+
+      </Routes>
     </div>
   )
 }
