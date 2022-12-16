@@ -1,4 +1,6 @@
 import React from "react";
+import Img from "../components/Img";
+import LinkButton from "../components/LinkButton";
 
 const Home = () => {
   return (
@@ -11,10 +13,7 @@ const Home = () => {
               <div className="swiper-slide">
                 {/* <!-- Start Slide Item --> */}
                 <div className="home-slider-item">
-                  <div
-                    className="bg-thumb bg-img hero-bg"
-                    data-bg-img="assets/img/slider/bg.jpg"
-                  ></div>
+                  <div className="bg-thumb bg-img hero-bg"></div>
                   <div className="slider-content-area">
                     <div className="container">
                       <div className="row align-items-center">
@@ -22,7 +21,7 @@ const Home = () => {
                           <div className="content">
                             <div className="inner-content">
                               <div className="icon">
-                                <img
+                                <Img
                                   src="assets/img/icons/g1.png"
                                   alt="Image"
                                 />
@@ -35,15 +34,18 @@ const Home = () => {
                                 luptas sit fugit, sed quia cuuntur magni dolores
                                 eos qui rat ione volupta
                               </p>
-                              <a href="contact.html" className="btn-theme">
+                              <LinkButton url="/contact" className="btn-theme">
                                 Contact Now
-                              </a>
+                              </LinkButton>
                             </div>
                           </div>
                         </div>
                         <div className="col-md-7 col-lg-7">
                           <div className="slider-thumb">
-                            <img src="assets/img/slider/hero-img.png" alt="Image" />
+                            <Img
+                              src="assets/img/slider/hero-img.png"
+                              alt="Image"
+                            />
                           </div>
                         </div>
                       </div>

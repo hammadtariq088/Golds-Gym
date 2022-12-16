@@ -11501,6 +11501,18 @@ table p {
   background: url("../public/assets/img/slider/bg.jpg");
 }
 
+.contact-banner-bg,
+.trainer-bg-hero {
+  background: no-repeat center center;
+  background-size: cover;
+  background: url("../public/assets/img/photos/hero-banners.jpg");
+}
+
+.team-item .content img{
+  width: 8rem;
+  height: auto;
+}
+
 .footer-bg {
   background: no-repeat center center;
   background-size: cover;

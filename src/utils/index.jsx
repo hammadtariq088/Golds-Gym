@@ -1,3 +1,53 @@
+// Header Data
+
+const headerLinks = [
+  {
+    id: 0,
+    url: "/",
+    name: "Home",
+  },
+  {
+    id: 1,
+    url: "/about",
+    name: "About",
+  },
+  {
+    id: 2,
+    url: "/exercises",
+    name: "Exercises",
+  },
+  {
+    id: 3,
+    url: "/plans",
+    name: "Gym Plans",
+  },
+  {
+    id: 4,
+    url: "/trainers",
+    name: "Trainers",
+  },
+  {
+    id: 5,
+    url: "/contact",
+    name: "Contact",
+  },
+];
+
+const authLinks = [
+  {
+    id: 0,
+    url: "/login",
+    name: "Login",
+  },
+  {
+    id: 1,
+    url: "/register",
+    name: "Register",
+  },
+];
+
+// --------------------------------------------
+
 // Footer Data
 const footerLinks = [
   {
@@ -74,8 +124,41 @@ const socialLinks = [
 
 // -----------------------------------------
 
-// Header Data
+// Trainers Data
 
-// --------------------------------------------
+const trainerData = [
+  {
+    id: 0,
+    src: "assets/img/team/tr1.jpg",
+    name: "Alex John",
+    dsgn: "Yoga Specialist",
+    rating: "assets/img/team/5-stars.png",
+    text: "Hire Me",
+  },
+  {
+    id: 1,
+    src: "assets/img/team/tr2.jpg",
+    name: "Halbert Bourn",
+    dsgn: "Body Building",
+    rating: "assets/img/team/4-stars.png",
+    text: "Hire Me",
+  },
+  {
+    id: 2,
+    src: "assets/img/team/tr3.jpg",
+    name: "Oliviea Williams",
+    dsgn: "Cardio Trainer",
+    rating: "assets/img/team/5-stars.png",
+    text: "Hire Me",
+  },
+  {
+    id: 3,
+    src: "assets/img/team/tr4.jpg",
+    name: "Nikolus Smith",
+    dsgn: "Fitness Trainer",
+    rating: "assets/img/team/3-stars.png",
+    text: "Hire Me",
+  },
+];
 
-export { footerLinks, socialLinks };
+export { footerLinks, socialLinks, headerLinks, authLinks, trainerData };

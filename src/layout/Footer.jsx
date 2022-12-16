@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="widget-item mb-sm-30">
                 <div className="about-widget">
                   <Link className="footer-logo" to="/">
-                    <Img src="assets/img/logo-light.png" alt="Logo" />
+                    <Img src="assets/img/golds-gym-logo.png" alt="Logo" />
                   </Link>
                   <p>
                     Golds Gym winner dolor sit consectetur adipiscing elit, sed
@@ -96,10 +96,10 @@ const Footer = () => {
                       <Img src="assets/img/icons/3.png" alt="Logo" />
                     </div>
                     <div className="content">
-                      <h4 className="title">Email</h4>
+                      <h4 className="title">Website</h4>
                       <ul>
                         <li>
-                          <Link to="#">info@goldsgym.com</Link>
+                          <Link to="#">www.goldsgym.com</Link>
                         </li>
                       </ul>
                     </div>
