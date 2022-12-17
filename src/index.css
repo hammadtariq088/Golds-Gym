@@ -11501,11 +11501,26 @@ table p {
   background: url("../public/assets/img/slider/bg.jpg");
 }
 
-.contact-banner-bg,
-.trainer-bg-hero {
+.hero-banner-bg {
   background: no-repeat center center;
   background-size: cover;
   background: url("../public/assets/img/photos/hero-banners.jpg");
+}
+
+.featured-discount-item .thumb{
+  background: no-repeat center center;
+  background-size: cover;
+  background: url("../public/assets/img/photos/discount1.jpg");
+}
+
+.featured-columns-wrap .featured-items-style2{
+  background: no-repeat center center;
+  background-size: cover;
+  background: url("../public/assets/img/photos/discountbg.jpg");
+}
+
+.page-title-content .desc p {
+  padding-right: 25rem;
 }
 
 .team-item .content img{
@@ -11517,4 +11532,12 @@ table p {
   background: no-repeat center center;
   background-size: cover;
   background: url("../public/assets/img/photos/footer-bg.png");
+}
+
+@media screen and (max-width: 576px) {
+  .page-title-content .desc p {
+    padding-right: 1rem;
+    margin-left: 0px !important;
+}
+
 }

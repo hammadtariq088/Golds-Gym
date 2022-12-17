@@ -140,7 +140,7 @@ const trainerData = [
     src: "assets/img/team/tr2.jpg",
     name: "Halbert Bourn",
     dsgn: "Body Building",
-    rating: "assets/img/team/4-stars.png",
+    rating: "assets/img/team/3-stars.png",
     text: "Hire Me",
   },
   {
@@ -148,7 +148,7 @@ const trainerData = [
     src: "assets/img/team/tr3.jpg",
     name: "Oliviea Williams",
     dsgn: "Cardio Trainer",
-    rating: "assets/img/team/5-stars.png",
+    rating: "assets/img/team/4-stars.png",
     text: "Hire Me",
   },
   {
@@ -156,9 +156,83 @@ const trainerData = [
     src: "assets/img/team/tr4.jpg",
     name: "Nikolus Smith",
     dsgn: "Fitness Trainer",
-    rating: "assets/img/team/3-stars.png",
+    rating: "assets/img/team/2-stars.png",
     text: "Hire Me",
   },
 ];
 
-export { footerLinks, socialLinks, headerLinks, authLinks, trainerData };
+// -----------------------------------------
+
+// Features Data
+
+const featuredData = [
+  {
+    id: 0,
+    src: "assets/img/icons/f1.png",
+    title: "Best Training",
+    text: "Best Training dolor sit consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore",
+  },
+  {
+    id: 1,
+    src: "assets/img/icons/f2.png",
+    title: "Qualified Instructor",
+    text: "Qualified Instructor consectetur adipg elit, sed do eiusmod tempor incididu ut labore dolore are same magna",
+  },
+  {
+    id: 2,
+    src: "assets/img/icons/f3.png",
+    title: "Latest Equipment",
+    text: "Latest equipment dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+  },
+  {
+    id: 3,
+    src: "assets/img/icons/f4.png",
+    title: "Award Winners",
+    text: "Award winner dolor sit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+  },
+];
+
+// -----------------------------------------
+
+// Exercise Cards Data
+
+const exerciseCards = [
+  {
+    id: 0,
+    src: "assets/img/class/dumble1.jpg",
+    title: "Dumble back lift",
+    sets: "3 SETS,",
+    mins: "5 MINUTES",
+  },
+  {
+    id: 1,
+    src: "assets/img/class/weight.jpg",
+    title: "Weight lifting",
+    sets: "4 SETS,",
+    mins: "3 MINUTES",
+  },
+  {
+    id: 2,
+    src: "assets/img/class/abs1.jpg",
+    title: "Abs fitness",
+    sets: "2 SETS,",
+    mins: "3 MINUTES",
+  },
+  {
+    id: 3,
+    src: "assets/img/class/roope1.jpg",
+    title: "Ropes lifting",
+    sets: "5 SETS,",
+    mins: "3 MINUTES",
+  },
+];
+
+export {
+  footerLinks,
+  socialLinks,
+  headerLinks,
+  authLinks,
+  trainerData,
+  featuredData,
+  exerciseCards,
+};
