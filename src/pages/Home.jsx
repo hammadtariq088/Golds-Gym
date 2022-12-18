@@ -1,5 +1,10 @@
 import React from "react";
 import MainHero from "../components/home/MainHero";
+import BestQualityGym from "../components/about/BestQualityGym";
+import GymFeatures from "../components/about/GymFeatures";
+import FeatureCards from "../components/about/FeatureCards";
+import FitnessGallery from "../components/home/FitnessGallery";
+import GymClasses from "../components/home/GymClasses";
 
 const Home = () => {
   return (
@@ -17,6 +22,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <FeatureCards />
+      <BestQualityGym />
+      <GymFeatures />
+      <FitnessGallery />
+      <GymClasses />
     </main>
   );
 };

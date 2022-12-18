@@ -13,7 +13,7 @@ const BestQualityGym = () => {
               <h2 className="title">
                 BEST <span>GYM STATION </span>FOR YOU BECAUSE
                 <br />
-                WE PROVIDE <span>BEST </span>QUALITY OF
+                WE PROVIDE <span>BEST </span>QUALITY OF&nbsp;
                 <span>
                   EQUIPMENTS <br />
                 </span>

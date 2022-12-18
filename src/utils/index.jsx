@@ -227,6 +227,76 @@ const exerciseCards = [
   },
 ];
 
+// -----------------------------------------
+
+// Gallery
+
+const fitnessGallery = [
+  {
+    id: 0,
+    src: "assets/img/gallery/g1.jpg",
+    href: "assets/img/gallery/g1.jpg",
+  },
+  {
+    id: 1,
+    src: "assets/img/gallery/g2.jpg",
+    href: "assets/img/gallery/g2.jpg",
+  },
+  {
+    id: 2,
+    src: "assets/img/gallery/g3.jpg",
+    href: "assets/img/gallery/g3.jpg",
+  },
+  {
+    id: 3,
+    src: "assets/img/gallery/g4.jpg",
+    href: "assets/img/gallery/g4.jpg",
+  },
+];
+
+// -----------------------------------------
+
+// Classes
+
+const gymClasses = [
+  {
+    id: 0,
+    src: "assets/img/service/c1.jpg",
+    title: "BODY BUILDING CLASS",
+    mins: "Duration 50 Minutes",
+  },
+  {
+    id: 1,
+    src: "assets/img/service/c2.jpg",
+    title: "FITNESS CLASS",
+    mins: "Duration 45 Minutes",
+  },
+  {
+    id: 2,
+    src: "assets/img/service/c3.jpg",
+    title: "CROSSFIT CLASS",
+    mins: "Duration 35 Minutes",
+  },
+  {
+    id: 3,
+    src: "assets/img/service/c4.jpg",
+    title: "YOGA CLASS",
+    mins: "Duration 25 Minutes",
+  },
+  {
+    id: 4,
+    src: "assets/img/service/c5.jpg",
+    title: "MARTIAL ART CLASS",
+    mins: "Duration 30 Minutes",
+  },
+  {
+    id: 5,
+    src: "assets/img/service/c6.jpg",
+    title: "CARDIO CLASS",
+    mins: "Duration 40 Minutes",
+  },
+];
+
 export {
   footerLinks,
   socialLinks,
@@ -235,4 +305,6 @@ export {
   trainerData,
   featuredData,
   exerciseCards,
+  fitnessGallery,
+  gymClasses,
 };
