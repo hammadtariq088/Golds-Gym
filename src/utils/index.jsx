@@ -297,6 +297,54 @@ const gymClasses = [
   },
 ];
 
+// -----------------------------------------
+
+// Gym Plans Data
+
+const gymPlans = [
+  {
+    id: 0,
+    name: "BASIC",
+    price: "Free",
+    duration: "",
+    src:"assets/img/photos/pricing1.png",
+    features: [
+      "6 hour access to the gym",
+      "5 Instrument to use.",
+      "2 classes per week",
+      "Free drinking package",
+    ],
+  },
+  {
+    id: 1,
+    name: "SILVER",
+    price: "$200",
+    duration: "per month",
+    src:"assets/img/photos/pricing2.png",
+    features: [
+      "6 months package",
+      "20 Instrument to use.",
+      "5 classes per week",
+      "Free drinking package",
+      "Personal trainer",
+    ],
+  },
+  {
+    id: 2,
+    name: "GOLD",
+    price: "$400",
+    duration: "per month",
+    src:"assets/img/photos/pricing3.png",
+    features: [
+      "12 months package",
+      "All Instrument to use.",
+      "7 classes per week",
+      "Free drinking package",
+      "Personal trainer",
+    ],
+  },
+];
+
 export {
   footerLinks,
   socialLinks,
@@ -307,4 +355,5 @@ export {
   exerciseCards,
   fitnessGallery,
   gymClasses,
+  gymPlans,
 };

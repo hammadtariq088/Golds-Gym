@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "hammad",
+      "email": "hammad@gmail.com",
+      "password": "22222222",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "name": "ahmad",
+      "email": "ahmad@gmail.com",
+      "password": "11111111",
+      "gender": "male"
+    },
+    {
+      "id": 3,
+      "name": "ayesha",
+      "email": "ayesha@gmail.com",
+      "password": "22221111",
+      "gender": "female"
+    },
+    {
+      "name": "fahad",
+      "email": "fahad@gmail.com",
+      "password": "12345678",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "name": "ali",
+      "email": "ali@gmail.com",
+      "password": "88888888",
+      "gender": "Male",
+      "id": 5
+    }
+  ]
+}

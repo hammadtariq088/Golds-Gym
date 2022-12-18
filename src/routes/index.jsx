@@ -9,6 +9,8 @@ import Exercises from "../pages/Exercises";
 import Trainers from "../pages/Trainers";
 import ExerciseDetails from "../pages/ExerciseDetails";
 import TrainerDetails from "../pages/TrainerDetails";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
 import { Route, Routes } from "react-router-dom";
 
 const Index = () => {
@@ -23,6 +25,8 @@ const Index = () => {
         <Route path="/plans" element={<GymPlans />} />
         <Route path="/trainers" element={<Trainers />} />
         <Route path="/trainerdetails" element={<TrainerDetails />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Layout>

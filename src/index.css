@@ -6453,6 +6453,7 @@ table p {
   box-shadow: 0px 13px 29px 0px rgba(0, 0, 0, 0.11);
   position: relative;
   padding: 31px 34px 42px 33px;
+  height: 35rem;
 }
 @media only screen and (max-width: 991px) {
   .pricing-item {
@@ -7717,9 +7718,10 @@ table p {
   height: 55px;
   line-height: 55px;
   padding: 0;
+  color: #fff;
 }
 .form-group .btn-theme:hover {
-  background-color: #252525;
+  background-color: #e5ba03;
   color: #fff;
 }
 
