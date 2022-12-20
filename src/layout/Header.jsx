@@ -4,10 +4,22 @@ import Img from "../components/Img";
 import Button from "../components/Button";
 import { headerLinks, authLinks } from "../utils";
 import Icon from "../components/Icon";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [headerMenu, setHeaderMenu] = useState(headerLinks);
   const [authMenu, setAuthMenu] = useState(authLinks);
+
+  const navigate = useNavigate();
+
+  const userName = localStorage.getItem("userName");
+
+  const handleClick = () => {
+    localStorage.clear();
+    if (userName === null) {
+      navigate("/login");
+    }
+  };
 
   return (
     <header className="header-area header-default header-transparent header-style sticky-header">
@@ -51,14 +63,20 @@ const Header = () => {
                         <Icon className="pe-7s-users" />
                       </span>
                       <ul className="submenu-nav">
-                        {authMenu.map((authMenu) => {
-                          const { id, url, name } = authMenu;
-                          return (
-                            <li key={id}>
-                              <Link to={url}>{name}</Link>
-                            </li>
-                          );
-                        })}
+                        {userName !== null ? (
+                          <li>
+                            <Link onClick={handleClick}>Logout</Link>
+                          </li>
+                        ) : (
+                          authMenu.map((authMenu) => {
+                            const { id, url, name } = authMenu;
+                            return (
+                              <li key={id}>
+                                <Link to={url}>{name}</Link>
+                              </li>
+                            );
+                          })
+                        )}
                       </ul>
                     </li>
                   </ul>

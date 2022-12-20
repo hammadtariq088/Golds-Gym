@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Input from "../Input";
 import Label from "../Label";
 import { Link } from "react-router-dom";
 import { loginSchema } from "../../schemas/UserValidation";
 import { useFormik } from "formik";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const response = await axios.get("http://localhost:5000/users");
+      setUsers(response.data);
+    };
+    getUsers();
+  }, []);
+
   const { values, errors, handleChange, handleSubmit, touched } = useFormik({
     initialValues: {
       email: "",
@@ -15,10 +28,27 @@ const LoginForm = () => {
     validationSchema: loginSchema,
 
     onSubmit: (values, action) => {
-      console.log(values);
+      // console.log(values);
       action.resetForm();
     },
   });
+
+  const handleClick = () => {
+    if (values.email !== "" && values.password !== "") {
+      const filteredUser = users.filter((user) => {
+        return user.email === values.email && user.password === values.password;
+      });
+      // console.log(filteredUser[0]);
+      const { id, name, password, email, gender } = filteredUser[0];
+      localStorage.setItem("userId", id);
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userPass", password);
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userGender", gender);
+      navigate("/plans");
+    }
+  };
+
   return (
     <div className="center my-5">
       <div className="container">
@@ -66,7 +96,7 @@ const LoginForm = () => {
                           className="btn btn-theme btn-black"
                           type="submit"
                           value="LOGIN"
-                          // onClick={handleClick}
+                          onClick={handleClick}
                         />
                       </div>
                     </div>

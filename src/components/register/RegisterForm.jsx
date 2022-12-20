@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 import registerSchema from "../../schemas/UserValidation";
 import { useFormik } from "formik";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
+
   const { values, errors, handleChange, handleSubmit, touched } = useFormik({
     initialValues: {
       name: "",
@@ -25,13 +28,21 @@ const RegisterForm = () => {
   });
 
   const handleClick = async () => {
-    const response = await axios.post("http://localhost:5000/users", values);
-    const { id, name, password, email, gender } = response.data;
-    localStorage.setItem("userId", id);
-    localStorage.setItem("userName", name);
-    localStorage.setItem("userEmail", email);
-    localStorage.setItem("userPass", password);
-    localStorage.setItem("userGender", gender);
+    if (
+      values.name !== "" &&
+      values.password !== "" &&
+      values.email !== "" &&
+      values.gender !== ""
+    ) {
+      const response = await axios.post("http://localhost:5000/users", values);
+      const { id, name, password, email, gender } = response.data;
+      localStorage.setItem("userId", id);
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPass", password);
+      localStorage.setItem("userGender", gender);
+      navigate("/plans");
+    }
   };
 
   return (

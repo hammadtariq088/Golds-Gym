@@ -5,21 +5,21 @@
       "name": "hammad",
       "email": "hammad@gmail.com",
       "password": "22222222",
-      "gender": "male"
+      "gender": "Male"
     },
     {
       "id": 2,
       "name": "ahmad",
       "email": "ahmad@gmail.com",
       "password": "11111111",
-      "gender": "male"
+      "gender": "Male"
     },
     {
       "id": 3,
       "name": "ayesha",
       "email": "ayesha@gmail.com",
       "password": "22221111",
-      "gender": "female"
+      "gender": "Female"
     },
     {
       "name": "fahad",
@@ -34,6 +34,36 @@
       "password": "88888888",
       "gender": "Male",
       "id": 5
+    },
+    {
+      "name": "rizwan ahmad",
+      "email": "rizwan@gmail.com",
+      "password": "rizwan123",
+      "gender": "Male",
+      "id": 6
+    },
+    {
+      "name": "rimsha",
+      "email": "rimsha@gmail.com",
+      "password": "99999999",
+      "gender": "Female",
+      "id": 7
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "hammad",
+      "email": "hammad@gmail.com",
+      "password": "22222222",
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "name": "waqas",
+      "email": "waqas@gmail.com",
+      "password": "11111111",
+      "gender": "Male"
     }
   ]
 }
