@@ -1,9 +1,23 @@
-import React from 'react'
+import { React, useState } from "react";
+import Hero from "../components/Hero";
+import AllExercises from "../components/exercises/AllExercises";
 
 const Exercises = () => {
+  const [exercises, setExercises] = useState([]);
+  const [bodyPart, setBodyPart] = useState("all");
   return (
-    <h1>Exercises</h1>
-  )
-}
+    <>
+      <Hero
+        heading="EXERCISES"
+        text="Gym is very important to maintain our health luptas sit fugit, sed quia cuuntur magni dolores eos qui rat ione volupta"
+      />
+      <AllExercises
+        setExercises={setExercises}
+        exercises={exercises}
+        bodyPart={bodyPart}
+      />
+    </>
+  );
+};
 
-export default Exercises
+export default Exercises;
