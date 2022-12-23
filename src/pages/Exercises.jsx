@@ -15,6 +15,7 @@ const Exercises = () => {
         setExercises={setExercises}
         exercises={exercises}
         bodyPart={bodyPart}
+        exercisesPerPage={4}
       />
     </>
   );

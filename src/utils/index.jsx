@@ -307,7 +307,7 @@ const gymPlans = [
     name: "BASIC",
     price: "Free",
     duration: "",
-    src:"assets/img/photos/pricing1.png",
+    src: "assets/img/photos/pricing1.png",
     features: [
       "6 hour access to the gym",
       "5 Instrument to use.",
@@ -320,7 +320,7 @@ const gymPlans = [
     name: "SILVER",
     price: "$200",
     duration: "per month",
-    src:"assets/img/photos/pricing2.png",
+    src: "assets/img/photos/pricing2.png",
     features: [
       "6 months package",
       "20 Instrument to use.",
@@ -334,7 +334,7 @@ const gymPlans = [
     name: "GOLD",
     price: "$400",
     duration: "per month",
-    src:"assets/img/photos/pricing3.png",
+    src: "assets/img/photos/pricing3.png",
     features: [
       "12 months package",
       "All Instrument to use.",
@@ -344,6 +344,24 @@ const gymPlans = [
     ],
   },
 ];
+
+// -----------------------------------------
+
+// Exercises Functions
+
+const exerciseOptions = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+  },
+};
+
+const fetchExerciseData = async (url, options) => {
+  const response = await fetch(url, options);
+  const data = await response.json();
+  return data;
+};
 
 export {
   footerLinks,
@@ -356,4 +374,6 @@ export {
   fitnessGallery,
   gymClasses,
   gymPlans,
+  fetchExerciseData,
+  exerciseOptions,
 };
