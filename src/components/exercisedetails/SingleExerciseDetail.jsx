@@ -22,7 +22,7 @@ const SingleExerciseDetail = ({ exerciseDetail }) => {
       <div className="col-md-6">
         <div className="single-product-thumb">
           <div className="thumb-item">
-            <a className="lightbox-image" data-fancybox="gallery" href="#">
+            <a className="lightbox-image" data-fancybox="gallery">
               <Img src={gifUrl} alt={name} />
             </a>
           </div>
