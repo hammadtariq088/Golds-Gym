@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { gymPlans } from "../../utils";
 import Button from "../Button";
 import Img from "../Img";
 
 const PlansCards = () => {
   const [plans, setPlans] = useState(gymPlans);
+  const planNameRef = useRef(null);
+  // const planPriceRef = useRef(null);
+  const userName = localStorage.getItem("userName");
+
+  const joinNow = (e) => {
+    console.log(planNameRef.current.innerHTML);
+  };
+
   return (
     <section className="pricing-area pricing-default-area">
       <div className="container">
@@ -31,7 +39,7 @@ const PlansCards = () => {
               <div className="col-md-4" key={id}>
                 <div className="pricing-item mb-sm-50">
                   <div className="pricing-title">
-                    <h5>{name}</h5>
+                    <h5 ref={planNameRef}>{name}</h5>
                   </div>
                   <div className="pricing-thumb pricing-thumb-style1">
                     <Img src={src} alt="Image" />
@@ -49,7 +57,9 @@ const PlansCards = () => {
                   </div>
                   <div className="pricing-footer">
                     <div className="pricing-footer-inner">
-                      <Button className="btn btn-theme">JOIN NOW</Button>
+                      <Button className="btn btn-theme" onClick={joinNow}>
+                        JOIN NOW
+                      </Button>
                     </div>
                   </div>
                 </div>

@@ -7922,7 +7922,7 @@ table p {
   }
 }
 .product-area.product-grid-area {
-  padding: 131px 0 130px;
+  padding: 131px 0 60px;
 }
 @media only screen and (max-width: 1199px) {
   .product-area.product-grid-area {
@@ -11542,4 +11542,27 @@ table p {
     margin-left: 0px !important;
 }
 
+}
+
+.exercise-pag {
+  max-width: 60rem;
+  margin: 0px auto;
+}
+
+.exercise-pag ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.exercise-icons{
+  max-width: 30px;
+}
+
+.product-item.mb-xs-30 {
+  height: 21rem;
+}
+
+.product-item .product-info{
+  background-color: #fff;
+  padding: 20px 15px 19px;
 }

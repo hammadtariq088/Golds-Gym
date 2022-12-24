@@ -3,37 +3,24 @@ import { exerciseOptions, fetchExerciseData } from "../../utils";
 import ExerciseCards from "./ExerciseCards";
 import ReactPaginate from "react-paginate";
 
-const AllExercises = ({
-  exercises,
-  setExercises,
-  bodyPart,
-  exercisesPerPage,
-}) => {
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [exercisesPerPage] = useState(6);
+const AllExercises = ({ exercisesPerPage }) => {
+  const [exercises, setExercises] = useState([]);
+
   useEffect(() => {
     const fetchExercisesData = async () => {
-      console.log(exercises);
-      let exercisesData = [];
-
-      if (bodyPart === "all") {
-        exercisesData = await fetchExerciseData(
-          "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-          exerciseOptions
-        );
-      } else {
-        exercisesData = await fetchExerciseData(
-          `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
-          exerciseOptions
-        );
-        console.log(exercisesData)
-      }
-
+      const exercisesData = await fetchExerciseData(
+        "https://exercisedb.p.rapidapi.com/exercises",
+        exerciseOptions
+      );
       setExercises(exercisesData);
     };
 
-    fetchExercisesData();
-  }, [bodyPart, exercises, setExercises]);
+    try {
+      fetchExercisesData();
+    } catch (error) {
+      alert(error);
+    }
+  }, []);
 
   // Pagination
 
@@ -58,18 +45,22 @@ const AllExercises = ({
     setExercisesOffset(newOffset);
   };
 
+  // console.log(currentExercises)
+
   return (
     <>
       <ExerciseCards currentExercises={currentExercises} />
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel="Next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< Previous"
-        renderOnZeroPageCount={null}
-      />
+      <div className="exercise-pag">
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel="Next >>"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="<< Previous"
+          renderOnZeroPageCount={null}
+        />
+      </div>
     </>
   );
 };

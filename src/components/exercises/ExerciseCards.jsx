@@ -1,5 +1,7 @@
 import React from "react";
-
+import Img from "../Img";
+import LinkButton from "../LinkButton";
+import { Link } from "react-router-dom";
 const ExerciseCards = ({ currentExercises }) => {
   return (
     <section className="product-area product-grid-area">
@@ -8,37 +10,39 @@ const ExerciseCards = ({ currentExercises }) => {
           <div className="col-12">
             <div className="product-content-area">
               <div className="row">
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                  <div className="product-item">
-                    <div className="product-thumb">
-                      <a href="shop-single-product.html">
-                        <img src="assets/img/shop/2.jpg" alt="Image" />
-                      </a>
-                      <div className="product-action">
-                        <a className="btn-theme" href="shop-cart.html">
-                          View More
-                        </a>
+                {currentExercises &&
+                  currentExercises.map((exercisesList) => {
+                    const { id, bodyPart, gifUrl, name, target } =
+                      exercisesList;
+                    return (
+                      <div className="col-sm-6 col-md-4 col-lg-3" key={id}>
+                        <div className="product-item">
+                          <div className="product-thumb">
+                            <Link href="shop-single-product.html">
+                              <Img src={gifUrl} alt="Image" />
+                            </Link>
+                            <div className="product-action">
+                              <LinkButton
+                                className="btn-theme"
+                                url={`/exercisedetails/${id}`}
+                              >
+                                View More
+                              </LinkButton>
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h4 className="title">
+                              <Link to={`/exercisedetails/${id}`}>{name}</Link>
+                            </h4>
+                            <div className="prices d-flex justify-content-between">
+                              <span className="price">{bodyPart}</span>
+                              <span className="price">{target}</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="product-info">
-                      <h4 className="title">
-                        <a href="shop-single-product.html">Fitness Slam Ball</a>
-                      </h4>
-                      <div className="prices">
-                        <span className="price">$48.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="product-btn">
-                    <a className="btn-border mt-10" href="shop.html">
-                      VIEW ALL
-                    </a>
-                  </div>
-                </div>
+                    );
+                  })}
               </div>
             </div>
           </div>
